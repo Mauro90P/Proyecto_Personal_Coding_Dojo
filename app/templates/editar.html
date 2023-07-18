@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block contenido %}
+
+
+
+{% include "includes/sidebar.html" %}
+<div class="row" style="justify-content: center;">
+    <div class="col-xl-4 col-md-6 mb-4">
+        <div class="card border-left-warning shadow h-100 py-2">
+            <div class="card-body">
+                <div class="row no-gutters align-items-center">
+                    <div class="col mr-2">
+                        <div class="col-auto">
+                            <i class="fas fa-clipboard-list fa-2x text-gray-300"></i>
+                        </div>
+                        <form action="/procesar_edit" method="post">
+                            <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
+                                <input type="text" class="form-control text-center" placeholder="Titulo"
+                                    name="nombre_tarea">
+                            </div>
+                            <hr>
+                            <div class="h5 mb-0 font-weight-bold text-gray-800">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                    placeholder="Descripción" name="descripcion"></textarea>
+                            </div>
+                            <hr>
+                            <div style="display: flex; justify-content: center;">
+                                <button class="btn btn-secondary" type="submit"
+                                    style="background-color: blue; margin-top: 10px;">Guardar</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
